@@ -1,0 +1,1064 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>The Brillers — Leather Goods Manufacturer, Sialkot</title>
+<meta name="description" content="The Brillers manufactures leather jackets, gloves, wallets, bags, belts and pants from Sialkot, Pakistan, for wholesale and private-label export.">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Big+Shoulders+Display:wght@500;600;700;800;900&family=Libre+Franklin:wght@400;500;600;700&display=swap" rel="stylesheet">
+<style>
+  :root{
+    --ink:#211710;
+    --saddle:#3B2417;
+    --saddle-dark:#241209;
+    --brass:#B9843F;
+    --brass-light:#D8AE6E;
+    --parchment:#F1E8D6;
+    --parchment-soft:#E9DDC2;
+    --tan:#8C5A34;
+    --stitch:#C9B896;
+    --paper:#FBF7EE;
+    --font-display:'Big Shoulders Display', sans-serif;
+    --font-body:'Libre Franklin', sans-serif;
+  }
+
+  *{ margin:0; padding:0; box-sizing:border-box; }
+
+  html{ scroll-behavior:smooth; }
+  @media (prefers-reduced-motion: reduce){
+    html{ scroll-behavior:auto; }
+    *{ animation-duration:0.001ms !important; animation-iteration-count:1 !important; transition-duration:0.001ms !important; }
+  }
+
+  body{
+    font-family:var(--font-body);
+    color:var(--ink);
+    background:var(--paper);
+    line-height:1.5;
+    -webkit-font-smoothing:antialiased;
+  }
+
+  a{ color:inherit; text-decoration:none; }
+  img,svg{ display:block; max-width:100%; }
+
+  .wrap{
+    width:100%;
+    max-width:1180px;
+    margin:0 auto;
+    padding-inline:28px;
+  }
+
+  h1,h2,h3{
+    font-family:var(--font-display);
+    font-weight:700;
+    line-height:0.98;
+    letter-spacing:0.002em;
+  }
+
+  :focus-visible{
+    outline:2px solid var(--brass);
+    outline-offset:3px;
+  }
+
+  /* ---------- Buttons ---------- */
+  .btn{
+    display:inline-flex;
+    align-items:center;
+    gap:10px;
+    font-family:var(--font-body);
+    font-weight:600;
+    font-size:0.95rem;
+    padding:13px 26px;
+    border-radius:2px;
+    border:1.5px solid transparent;
+    cursor:pointer;
+    transition:background-color 0.18s ease, color 0.18s ease, border-color 0.18s ease;
+  }
+  .btn-primary{
+    background:var(--brass);
+    color:var(--saddle-dark);
+  }
+  .btn-primary:hover{ background:var(--brass-light); }
+  .btn-ghost{
+    background:transparent;
+    border-color:currentColor;
+    color:inherit;
+  }
+  .btn-ghost:hover{ background:rgba(255,255,255,0.08); }
+  .btn-ghost.on-light:hover{ background:rgba(33,23,16,0.06); }
+
+  /* ---------- Header ---------- */
+  header{
+    position:sticky;
+    top:0;
+    z-index:50;
+    background:rgba(36,18,9,0.94);
+    backdrop-filter:blur(6px);
+    border-bottom:1px solid rgba(216,174,110,0.25);
+  }
+  .header-inner{
+    display:flex;
+    align-items:center;
+    justify-content:space-between;
+    padding-block:14px;
+  }
+  .brand{
+    display:flex;
+    align-items:center;
+    gap:12px;
+    color:var(--paper);
+  }
+  .brand-logo{ 
+    width:44px; 
+    height:44px; 
+    flex-shrink:0; 
+    border-radius:2px;
+    overflow:hidden;
+  }
+  .brand-logo img{ width:100%; height:100%; object-fit:cover; }
+  .brand-name{
+    font-family:var(--font-display);
+    font-weight:700;
+    font-size:1.28rem;
+    letter-spacing:0.01em;
+    line-height:1;
+  }
+  .brand-sub{
+    font-size:0.62rem;
+    letter-spacing:0.14em;
+    color:var(--brass-light);
+    margin-top:3px;
+  }
+  nav.primary-nav{
+    display:flex;
+    align-items:center;
+    gap:34px;
+  }
+  nav.primary-nav a{
+    color:var(--parchment-soft);
+    font-size:0.92rem;
+    font-weight:500;
+    padding-block:4px;
+    border-bottom:1px solid transparent;
+    transition:border-color 0.18s ease, color 0.18s ease;
+  }
+  nav.primary-nav a:hover{ color:var(--paper); border-color:var(--brass); }
+  .nav-cta{ display:flex; align-items:center; gap:22px; }
+  .menu-toggle{
+    display:none;
+    background:none;
+    border:1px solid var(--brass-light);
+    border-radius:2px;
+    width:40px; height:36px;
+    color:var(--paper);
+    cursor:pointer;
+    align-items:center;
+    justify-content:center;
+  }
+  #nav-links{ display:contents; }
+
+  @media (max-width:860px){
+    nav.primary-nav{
+      display:none;
+      position:absolute;
+      top:100%; left:0; right:0;
+      background:var(--saddle-dark);
+      flex-direction:column;
+      align-items:flex-start;
+      gap:0;
+      padding:8px 28px 20px;
+      border-bottom:1px solid rgba(216,174,110,0.25);
+    }
+    nav.primary-nav.open{ display:flex; }
+    nav.primary-nav a{ width:100%; padding-block:12px; border-bottom:1px solid rgba(255,255,255,0.06); }
+    .nav-cta .btn-primary{ display:none; }
+    .menu-toggle{ display:inline-flex; }
+  }
+
+  /* ---------- Hero ---------- */
+  .hero{
+    background:
+      radial-gradient(ellipse at 18% 12%, rgba(216,174,110,0.10), transparent 55%),
+      linear-gradient(160deg, var(--saddle) 0%, var(--saddle-dark) 78%);
+    color:var(--paper);
+    position:relative;
+    overflow:hidden;
+  }
+  .hero::after{
+    content:"";
+    position:absolute; inset:0;
+    background-image:repeating-linear-gradient(115deg, rgba(255,255,255,0.025) 0px, rgba(255,255,255,0.025) 1px, transparent 1px, transparent 5px);
+    pointer-events:none;
+  }
+  .hero-inner{
+    position:relative;
+    display:grid;
+    grid-template-columns:1.15fr 0.85fr;
+    align-items:center;
+    gap:40px;
+    padding-block:88px 76px;
+  }
+  .hero-eyebrow{
+    display:inline-flex;
+    align-items:center;
+    gap:10px;
+    font-size:0.82rem;
+    color:var(--brass-light);
+    font-weight:500;
+    margin-bottom:22px;
+  }
+  .hero-eyebrow .dot{ width:6px; height:6px; border-radius:50%; background:var(--brass-light); }
+  .hero h1{
+    font-size:clamp(2.6rem, 5.4vw, 4.4rem);
+    color:var(--paper);
+    max-width:11ch;
+  }
+  .hero p.lead{
+    margin-top:26px;
+    max-width:46ch;
+    font-size:1.08rem;
+    color:var(--parchment-soft);
+  }
+  .hero-actions{
+    display:flex;
+    flex-wrap:wrap;
+    gap:14px;
+    margin-top:38px;
+  }
+  .hero-figure{ 
+    display:flex; 
+    justify-content:center; 
+    align-items:center;
+  }
+  .hero-badge{
+    width:100%;
+    max-width:280px;
+    border-radius:4px;
+    box-shadow: 0 12px 32px rgba(0,0,0,0.2);
+  }
+  .hero-badge img{
+    width:100%;
+    height:auto;
+  }
+
+  @keyframes hero-rise{
+    from{ opacity:0; transform:translateY(14px); }
+    to{ opacity:1; transform:translateY(0); }
+  }
+  .hero-eyebrow, .hero h1, .hero p.lead, .hero-actions, .hero-figure{
+    animation:hero-rise 0.7s ease both;
+  }
+  .hero h1{ animation-delay:0.06s; }
+  .hero p.lead{ animation-delay:0.14s; }
+  .hero-actions{ animation-delay:0.22s; }
+  .hero-figure{ animation-delay:0.1s; }
+
+  @media (max-width:860px){
+    .hero-inner{ grid-template-columns:1fr; padding-block:56px 48px; text-align:left; }
+    .hero-figure{ order:-1; margin-bottom:8px; }
+    .hero-badge{ max-width:200px; }
+  }
+
+  /* ---------- Ticker ---------- */
+  .ticker-band{
+    background:var(--brass);
+    color:var(--saddle-dark);
+    overflow:hidden;
+    border-block:1px solid rgba(36,18,9,0.15);
+  }
+  .ticker-track{
+    display:flex;
+    width:max-content;
+    animation:ticker-scroll 34s linear infinite;
+  }
+  @media (prefers-reduced-motion: reduce){
+    .ticker-track{ animation:none; flex-wrap:wrap; }
+  }
+  .ticker-band:hover .ticker-track{ animation-play-state:paused; }
+  @keyframes ticker-scroll{
+    from{ transform:translateX(0); }
+    to{ transform:translateX(-50%); }
+  }
+  .ticker-set{
+    display:flex;
+    align-items:center;
+  }
+  .ticker-item{
+    font-size:0.92rem;
+    font-weight:600;
+    white-space:nowrap;
+    padding:13px 0;
+  }
+  .ticker-rule{
+    width:1px;
+    height:14px;
+    background:rgba(36,18,9,0.3);
+    margin-inline:22px;
+  }
+
+  /* ---------- Section shared ---------- */
+  section{ padding-block:88px; }
+  .section-head{
+    max-width:56ch;
+    margin-bottom:52px;
+  }
+  .section-head h2{
+    font-size:clamp(2rem, 3.6vw, 2.9rem);
+  }
+  .section-head p{
+    margin-top:16px;
+    font-size:1.02rem;
+    color:var(--tan);
+  }
+  .on-dark .section-head p{ color:var(--parchment-soft); }
+
+  /* ---------- Products ---------- */
+  .products{ background:var(--parchment); }
+  .product-grid{
+    display:grid;
+    grid-template-columns:repeat(6, 1fr);
+    grid-auto-rows:auto;
+    border-top:1px solid var(--stitch);
+    border-left:1px solid var(--stitch);
+  }
+  .product-card{
+    grid-column:span 2;
+    border-right:1px solid var(--stitch);
+    border-bottom:1px solid var(--stitch);
+    padding:34px 28px;
+    display:flex;
+    flex-direction:column;
+    gap:16px;
+    transition:background-color 0.2s ease;
+  }
+  .product-card:hover{ background:rgba(255,255,255,0.45); }
+  .product-card.feature{ grid-column:span 4; }
+  .product-icon{ width:46px; height:46px; color:var(--saddle); }
+  .product-card h3{
+    font-size:1.5rem;
+    font-weight:600;
+  }
+  .product-card p{ font-size:0.94rem; color:var(--tan); max-width:38ch; }
+
+  @media (max-width:860px){
+    .product-grid{ grid-template-columns:repeat(2, 1fr); }
+    .product-card, .product-card.feature{ grid-column:span 2; }
+  }
+
+  /* ---------- Articles ---------- */
+  .articles{ background:var(--paper); }
+  .articles-grid{
+    display:grid;
+    grid-template-columns:repeat(3, 1fr);
+    gap:32px;
+  }
+  .article-card{
+    border:1px solid var(--stitch);
+    border-radius:3px;
+    overflow:hidden;
+    transition:transform 0.2s ease, box-shadow 0.2s ease;
+    background:var(--parchment);
+  }
+  .article-card:hover{
+    transform:translateY(-4px);
+    box-shadow:0 12px 28px rgba(33,23,16,0.12);
+  }
+  .article-image{
+    width:100%;
+    height:220px;
+    background:linear-gradient(135deg, var(--saddle), var(--tan));
+    overflow:hidden;
+    display:flex;
+    align-items:center;
+    justify-content:center;
+    color:var(--paper);
+    font-size:4rem;
+    font-weight:300;
+    position:relative;
+  }
+  .article-image img{
+    width:100%;
+    height:100%;
+    object-fit:cover;
+  }
+  .article-image-placeholder{
+    width:100%;
+    height:100%;
+    background:linear-gradient(135deg, rgba(59,36,23,0.1), rgba(140,90,52,0.1));
+    display:flex;
+    align-items:center;
+    justify-content:center;
+    font-size:3.5rem;
+    color:rgba(185,132,63,0.3);
+  }
+  .article-content{
+    padding:26px;
+  }
+  .article-tag{
+    display:inline-block;
+    font-size:0.72rem;
+    font-weight:600;
+    letter-spacing:0.1em;
+    color:var(--brass);
+    margin-bottom:10px;
+  }
+  .article-card h3{
+    font-size:1.28rem;
+    margin-bottom:12px;
+    color:var(--saddle);
+  }
+  .article-card p{
+    font-size:0.95rem;
+    color:var(--tan);
+    line-height:1.6;
+    margin-bottom:18px;
+  }
+  .article-meta{
+    font-size:0.8rem;
+    color:var(--stitch);
+    margin-bottom:16px;
+  }
+  .article-link{
+    display:inline-flex;
+    align-items:center;
+    gap:8px;
+    font-weight:600;
+    color:var(--brass);
+    font-size:0.92rem;
+    transition:gap 0.2s ease;
+  }
+  .article-link:hover{ gap:12px; }
+
+  @media (max-width:860px){
+    .articles-grid{ grid-template-columns:repeat(2, 1fr); gap:24px; }
+  }
+
+  @media (max-width:600px){
+    .articles-grid{ grid-template-columns:1fr; }
+  }
+
+  /* ---------- Craft process ---------- */
+  .craft{
+    background:linear-gradient(180deg, var(--saddle-dark), var(--ink));
+    color:var(--paper);
+  }
+  .craft-list{
+    display:flex;
+    flex-direction:column;
+  }
+  .craft-step{
+    display:grid;
+    grid-template-columns:74px 1fr;
+    gap:24px;
+    padding-block:28px;
+    border-top:1px solid rgba(216,174,110,0.2);
+  }
+  .craft-step:last-child{ border-bottom:1px solid rgba(216,174,110,0.2); }
+  .craft-num{
+    font-family:var(--font-display);
+    font-size:2.1rem;
+    font-weight:600;
+    color:var(--brass-light);
+  }
+  .craft-step h3{
+    font-size:1.3rem;
+    font-weight:600;
+    margin-bottom:8px;
+  }
+  .craft-step p{ color:var(--parchment-soft); max-width:56ch; font-size:0.98rem; }
+
+  @media (max-width:600px){
+    .craft-step{ grid-template-columns:1fr; gap:6px; }
+  }
+
+  /* ---------- About / Director ---------- */
+  .about{ background:var(--parchment); }
+  .about-inner{
+    display:grid;
+    grid-template-columns:0.62fr 1fr;
+    gap:56px;
+    align-items:start;
+  }
+  .director-badge{
+    width:100%;
+    max-width:220px;
+    border-radius:4px;
+    overflow:hidden;
+    box-shadow: 0 8px 20px rgba(0,0,0,0.15);
+  }
+  .director-badge img{
+    width:100%;
+    height:auto;
+  }
+  .about-copy .quote{
+    font-family:var(--font-display);
+    font-weight:500;
+    font-size:1.5rem;
+    line-height:1.28;
+    color:var(--saddle);
+    margin-bottom:26px;
+    max-width:32ch;
+  }
+  .about-copy p.body-text{
+    max-width:58ch;
+    color:var(--ink);
+    font-size:1rem;
+    margin-bottom:16px;
+  }
+  .director-name{
+    margin-top:26px;
+    font-weight:700;
+    font-size:1.05rem;
+  }
+  .director-title{
+    font-size:0.86rem;
+    color:var(--tan);
+    margin-top:2px;
+  }
+
+  @media (max-width:780px){
+    .about-inner{ grid-template-columns:1fr; }
+    .director-badge{ max-width:150px; }
+  }
+
+  /* ---------- Contact ---------- */
+  .contact{
+    background:linear-gradient(160deg, var(--saddle-dark), var(--ink) 85%);
+    color:var(--paper);
+  }
+  .contact-inner{
+    display:grid;
+    grid-template-columns:0.9fr 1.1fr;
+    gap:60px;
+  }
+  .contact-info h2{ font-size:clamp(2rem,3.6vw,2.7rem); margin-bottom:18px; }
+  .contact-info p.lead{ color:var(--parchment-soft); max-width:40ch; margin-bottom:36px; }
+  .address-block{
+    display:flex;
+    gap:16px;
+    padding-top:24px;
+    border-top:1px solid rgba(216,174,110,0.25);
+  }
+  .address-block svg{ width:24px; height:24px; flex-shrink:0; color:var(--brass-light); margin-top:2px; }
+  .address-block address{ font-style:normal; color:var(--parchment-soft); line-height:1.65; }
+  .address-block strong{ color:var(--paper); display:block; margin-bottom:4px; }
+
+  form.enquiry{
+    display:grid;
+    grid-template-columns:1fr 1fr;
+    gap:18px;
+    background:rgba(251,247,238,0.04);
+    border:1px solid rgba(216,174,110,0.22);
+    padding:32px;
+    border-radius:2px;
+  }
+  form.enquiry .field{ display:flex; flex-direction:column; gap:8px; }
+  form.enquiry .field.full{ grid-column:1 / -1; }
+  form.enquiry label{ font-size:0.84rem; color:var(--brass-light); font-weight:500; }
+  form.enquiry input, form.enquiry select, form.enquiry textarea{
+    background:rgba(251,247,238,0.06);
+    border:1px solid rgba(216,174,110,0.3);
+    border-radius:2px;
+    color:var(--paper);
+    padding:11px 12px;
+    font-family:var(--font-body);
+    font-size:0.95rem;
+  }
+  form.enquiry input:focus, form.enquiry select:focus, form.enquiry textarea:focus{
+    outline:2px solid var(--brass);
+    outline-offset:1px;
+    border-color:transparent;
+  }
+  form.enquiry textarea{ resize:vertical; min-height:96px; }
+  form.enquiry .form-foot{
+    grid-column:1 / -1;
+    display:flex;
+    align-items:center;
+    justify-content:space-between;
+    gap:16px;
+    flex-wrap:wrap;
+    margin-top:6px;
+  }
+  form.enquiry .form-note{ font-size:0.78rem; color:rgba(233,221,194,0.6); max-width:34ch; }
+  .form-status{
+    grid-column:1 / -1;
+    font-size:0.9rem;
+    color:var(--brass-light);
+    display:none;
+  }
+  .form-status.show{ display:block; }
+
+  @media (max-width:780px){
+    .contact-inner{ grid-template-columns:1fr; }
+    form.enquiry{ grid-template-columns:1fr; }
+  }
+
+  /* ---------- Footer ---------- */
+  footer{
+    background:var(--ink);
+    color:rgba(233,221,194,0.6);
+    padding-block:44px;
+  }
+  .footer-inner{
+    display:flex;
+    flex-wrap:wrap;
+    justify-content:space-between;
+    align-items:center;
+    gap:20px;
+  }
+  .footer-brand{ 
+    display:flex; 
+    align-items:center; 
+    gap:10px; 
+    color:var(--paper); 
+  }
+  .footer-brand-logo{
+    width:28px;
+    height:28px;
+    border-radius:2px;
+    overflow:hidden;
+    flex-shrink:0;
+  }
+  .footer-brand-logo img{
+    width:100%;
+    height:100%;
+    object-fit:cover;
+  }
+  .footer-brand span{ 
+    font-family:var(--font-display); 
+    font-weight:600; 
+    font-size:1rem; 
+  }
+  .footer-links{ display:flex; gap:24px; flex-wrap:wrap; font-size:0.88rem; }
+  .footer-links a:hover{ color:var(--paper); }
+  .footer-fine{
+    margin-top:28px;
+    padding-top:20px;
+    border-top:1px solid rgba(216,174,110,0.15);
+    font-size:0.8rem;
+    display:flex;
+    justify-content:space-between;
+    flex-wrap:wrap;
+    gap:10px;
+  }
+</style>
+</head>
+<body>
+
+<header>
+  <div class="wrap header-inner">
+    <a href="#top" class="brand">
+      <div class="brand-logo">
+        <img src="images/logo-badge.jpg" alt="The Brillers logo">
+      </div>
+      <span>
+        <span class="brand-name">The Brillers</span>
+        <span class="brand-sub">LEATHER MANUFACTURER · SIALKOT</span>
+      </span>
+    </a>
+
+    <nav class="primary-nav" id="nav-links">
+      <a href="#products">Products</a>
+      <a href="#articles">Latest</a>
+      <a href="#craft">Craftsmanship</a>
+      <a href="#about">About</a>
+      <a href="#contact">Contact</a>
+    </nav>
+
+    <div class="nav-cta">
+      <a href="#contact" class="btn btn-primary">Request catalogue</a>
+      <button class="menu-toggle" id="menu-toggle" aria-label="Toggle menu" aria-expanded="false" aria-controls="nav-links">
+        <svg width="20" height="14" viewBox="0 0 20 14" fill="none"><path d="M0 1h20M0 7h20M0 13h20" stroke="currentColor" stroke-width="1.6"/></svg>
+      </button>
+    </div>
+  </div>
+</header>
+
+<main id="top">
+
+  <!-- HERO -->
+  <section class="hero">
+    <div class="wrap hero-inner">
+      <div>
+        <div class="hero-eyebrow"><span class="dot"></span> Manufacturer &amp; exporter, Sialkot, Pakistan</div>
+        <h1>Built on hide,<br>held by hand.</h1>
+        <p class="lead">The Brillers manufactures leather jackets, gloves, wallets, bags, belts and pants for wholesale and private-label buyers — cut, stitched and finished in the same Sialkot workshop, to whichever spec sheet you send us.</p>
+        <div class="hero-actions">
+          <a href="#contact" class="btn btn-primary">Request wholesale catalogue</a>
+          <a href="#products" class="btn btn-ghost">See what we make</a>
+        </div>
+      </div>
+      <div class="hero-figure">
+        <div class="hero-badge">
+          <img src="images/logo-badge.jpg" alt="The Brillers embossed leather badge">
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- TICKER -->
+  <div class="ticker-band" aria-hidden="true">
+    <div class="ticker-track">
+      <div class="ticker-set">
+        <span class="ticker-item">Full-grain cowhide</span><span class="ticker-rule"></span>
+        <span class="ticker-item">Nappa sheepskin</span><span class="ticker-rule"></span>
+        <span class="ticker-item">Hand-cut patterns</span><span class="ticker-rule"></span>
+        <span class="ticker-item">Saddle stitching</span><span class="ticker-rule"></span>
+        <span class="ticker-item">Brass &amp; nickel hardware</span><span class="ticker-rule"></span>
+        <span class="ticker-item">OEM &amp; private label</span><span class="ticker-rule"></span>
+        <span class="ticker-item">Export-ready packing</span><span class="ticker-rule"></span>
+      </div>
+      <div class="ticker-set">
+        <span class="ticker-item">Full-grain cowhide</span><span class="ticker-rule"></span>
+        <span class="ticker-item">Nappa sheepskin</span><span class="ticker-rule"></span>
+        <span class="ticker-item">Hand-cut patterns</span><span class="ticker-rule"></span>
+        <span class="ticker-item">Saddle stitching</span><span class="ticker-rule"></span>
+        <span class="ticker-item">Brass &amp; nickel hardware</span><span class="ticker-rule"></span>
+        <span class="ticker-item">OEM &amp; private label</span><span class="ticker-rule"></span>
+        <span class="ticker-item">Export-ready packing</span><span class="ticker-rule"></span>
+      </div>
+    </div>
+  </div>
+
+  <!-- PRODUCTS -->
+  <section class="products" id="products">
+    <div class="wrap">
+      <div class="section-head">
+        <h2>What we manufacture</h2>
+        <p>Six product lines built in the same workshop, to the same standard — so a jacket order and a belt order leave the floor looking like they came off one bench.</p>
+      </div>
+    </div>
+
+    <div class="wrap" style="padding:0;">
+      <div class="product-grid">
+
+        <div class="product-card feature">
+          <svg class="product-icon" viewBox="0 0 48 48" fill="none" stroke="currentColor" stroke-width="1.6" stroke-linejoin="round" stroke-linecap="round">
+            <path d="M15 8h6l3 3 3-3h6l7 7-4 11v18a3 3 0 0 1-3 3H15a3 3 0 0 1-3-3V26l-4-11 7-7z"/>
+            <path d="M21 8l3 4 3-4"/>
+            <path d="M24 18v22"/>
+            <path d="M13 30h8M27 30h8"/>
+          </svg>
+          <h3>Jackets</h3>
+          <p>Biker, bomber, trucker and blazer silhouettes in cowhide, lambskin and nappa. Quilted, fleece or nylon linings, with zips and hardware to your spec.</p>
+        </div>
+
+        <div class="product-card">
+          <svg class="product-icon" viewBox="0 0 48 48" fill="none" stroke="currentColor" stroke-width="1.6" stroke-linejoin="round" stroke-linecap="round">
+            <path d="M16 44V22a5 5 0 0 1 5-5h1V10a3 3 0 0 1 6 0v7h2v-9a3 3 0 0 1 6 0v9h2V12a3 3 0 0 1 6 0v10a5 5 0 0 1-5 5v9a8 8 0 0 1-8 8h-7a8 8 0 0 1-8-8z"/>
+          </svg>
+          <h3>Gloves</h3>
+          <p>Driving, dress and work gloves, lined or unlined, cut to the sizing chart you supply.</p>
+        </div>
+
+        <div class="product-card">
+          <svg class="product-icon" viewBox="0 0 48 48" fill="none" stroke="currentColor" stroke-width="1.6" stroke-linejoin="round" stroke-linecap="round">
+            <rect x="7" y="15" width="34" height="22" rx="2"/>
+            <path d="M7 24h34"/>
+            <rect x="12" y="28" width="10" height="6" rx="1"/>
+          </svg>
+          <h3>Wallets</h3>
+          <p>Bifold, trifold and card wallets, with optional RFID-blocking lining and blind or foil embossing.</p>
+        </div>
+
+        <div class="product-card">
+          <svg class="product-icon" viewBox="0 0 48 48" fill="none" stroke="currentColor" stroke-width="1.6" stroke-linejoin="round" stroke-linecap="round">
+            <path d="M10 20h28l-2 22a3 3 0 0 1-3 3H15a3 3 0 0 1-3-3l-2-22z"/>
+            <path d="M17 20v-4a7 7 0 0 1 14 0v4"/>
+          </svg>
+          <h3>Bags</h3>
+          <p>Totes, messenger bags, duffels and backpacks, built on the same pattern-and-stitch line as the jackets.</p>
+        </div>
+
+        <div class="product-card">
+          <svg class="product-icon" viewBox="0 0 48 48" fill="none" stroke="currentColor" stroke-width="1.6" stroke-linejoin="round" stroke-linecap="round">
+            <rect x="4" y="20" width="24" height="8" rx="1"/>
+            <rect x="28" y="18" width="10" height="12" rx="1.5"/>
+            <circle cx="12" cy="24" r="1.1" fill="currentColor" stroke="none"/>
+            <circle cx="18" cy="24" r="1.1" fill="currentColor" stroke="none"/>
+          </svg>
+          <h3>Belts</h3>
+          <p>Dress and casual belts in single or double-layer hide, with brass, nickel or antique buckles.</p>
+        </div>
+
+        <div class="product-card">
+          <svg class="product-icon" viewBox="0 0 48 48" fill="none" stroke="currentColor" stroke-width="1.6" stroke-linejoin="round" stroke-linecap="round">
+            <path d="M14 6h20l1 14-2 22h-6l-3-24-3 24h-6l-2-22z"/>
+            <path d="M14 6l-1 6M34 6l1 6"/>
+          </svg>
+          <h3>Pants</h3>
+          <p>Leather trousers and chaps, straight or slim cut, reinforced at the stress seams.</p>
+        </div>
+
+      </div>
+    </div>
+  </section>
+
+  <!-- LATEST ARTICLES -->
+  <section class="articles" id="articles">
+    <div class="wrap">
+      <div class="section-head">
+        <h2>Latest from the bench</h2>
+        <p>Stories, techniques, and materials from our workshop and the leather world.</p>
+      </div>
+
+      <div class="articles-grid">
+        
+        <article class="article-card">
+          <div class="article-image">
+            <img src="images/article-saddle-stitch.jpg" alt="Close-up of saddle stitching on leather" loading="lazy">
+            <noscript><div class="article-image-placeholder">🧵</div></noscript>
+          </div>
+          <div class="article-content">
+            <span class="article-tag">TECHNIQUE</span>
+            <h3>The art of saddle stitching</h3>
+            <p>Why hand-stitched seams last longer, why saddle stitching is stronger than lock stitching, and why we still do it by hand.</p>
+            <div class="article-meta">5 min read • Oct 2026</div>
+            <a href="#" class="article-link">Read article →</a>
+          </div>
+        </article>
+
+        <article class="article-card">
+          <div class="article-image">
+            <img src="images/article-full-grain.jpg" alt="Full-grain leather texture and samples" loading="lazy">
+            <noscript><div class="article-image-placeholder">🌾</div></noscript>
+          </div>
+          <div class="article-content">
+            <span class="article-tag">MATERIALS</span>
+            <h3>Full-grain vs. nappa: What's the difference?</h3>
+            <p>How leather grading works, why full-grain shows more character, and when nappa is the better choice for your order.</p>
+            <div class="article-meta">6 min read • Sep 2026</div>
+            <a href="#" class="article-link">Read article →</a>
+          </div>
+        </article>
+
+        <article class="article-card">
+          <div class="article-image">
+            <img src="images/article-pattern-cutting.jpg" alt="Leather patterns laid out for cutting" loading="lazy">
+            <noscript><div class="article-image-placeholder">✂️</div></noscript>
+          </div>
+          <div class="article-content">
+            <span class="article-tag">CRAFTSMANSHIP</span>
+            <h3>Pattern cutting: From hide to garment</h3>
+            <p>How we cut patterns, why grain direction matters, and how we minimize waste on every hide that comes through the workshop.</p>
+            <div class="article-meta">7 min read • Sep 2026</div>
+            <a href="#" class="article-link">Read article →</a>
+          </div>
+        </article>
+
+        <article class="article-card">
+          <div class="article-image">
+            <img src="images/article-hardware.jpg" alt="Selection of zips, buckles, and brass hardware" loading="lazy">
+            <noscript><div class="article-image-placeholder">⚙️</div></noscript>
+          </div>
+          <div class="article-content">
+            <span class="article-tag">HARDWARE</span>
+            <h3>Choosing the right zipper and buckle</h3>
+            <p>Brass vs. nickel vs. antique finishes, YKK zips, and how hardware choice affects durability and aesthetic of your line.</p>
+            <div class="article-meta">5 min read • Aug 2026</div>
+            <a href="#" class="article-link">Read article →</a>
+          </div>
+        </article>
+
+        <article class="article-card">
+          <div class="article-image">
+            <img src="images/article-finishing.jpg" alt="Edge burnishing and leather finishing tools" loading="lazy">
+            <noscript><div class="article-image-placeholder">🧵</div></noscript>
+          </div>
+          <div class="article-content">
+            <span class="article-tag">FINISHING</span>
+            <h3>Edge burnishing and sealing</h3>
+            <p>Why burnished edges look better and last longer, the difference between waxed and sealed edges, and our finishing process.</p>
+            <div class="article-meta">4 min read • Aug 2026</div>
+            <a href="#" class="article-link">Read article →</a>
+          </div>
+        </article>
+
+        <article class="article-card">
+          <div class="article-image">
+            <img src="images/article-packing.jpg" alt="Finished leather goods being packed for export" loading="lazy">
+            <noscript><div class="article-image-placeholder">📦</div></noscript>
+          </div>
+          <div class="article-content">
+            <span class="article-tag">LOGISTICS</span>
+            <h3>Export-ready packing and shipping</h3>
+            <p>How we pack for international shipping, labeling standards, customs compliance, and getting your order to you safely.</p>
+            <div class="article-meta">5 min read • Jul 2026</div>
+            <a href="#" class="article-link">Read article →</a>
+          </div>
+        </article>
+
+      </div>
+    </div>
+  </section>
+
+  <!-- CRAFT PROCESS -->
+  <section class="craft on-dark" id="craft">
+    <div class="wrap">
+      <div class="section-head">
+        <h2>How a hide becomes a garment</h2>
+        <p>Every order — one jacket or several hundred — moves through the same five stages before it's packed.</p>
+      </div>
+
+      <div class="craft-list">
+        <div class="craft-step">
+          <div class="craft-num">01</div>
+          <div>
+            <h3>Sourcing &amp; grading</h3>
+            <p>Hides are graded by hand for grain, thickness and flaw before they're approved for cutting.</p>
+          </div>
+        </div>
+        <div class="craft-step">
+          <div class="craft-num">02</div>
+          <div>
+            <h3>Pattern cutting</h3>
+            <p>Every panel is cut to your spec sheet or an approved sample, grain direction checked panel by panel.</p>
+          </div>
+        </div>
+        <div class="craft-step">
+          <div class="craft-num">03</div>
+          <div>
+            <h3>Skiving &amp; stitching</h3>
+            <p>Edges are skived for a flat seam, then saddle-stitched or lock-stitched depending on the piece.</p>
+          </div>
+        </div>
+        <div class="craft-step">
+          <div class="craft-num">04</div>
+          <div>
+            <h3>Hardware &amp; finishing</h3>
+            <p>Zips, buckles, rivets and linings are set by hand; edges are burnished and sealed.</p>
+          </div>
+        </div>
+        <div class="craft-step">
+          <div class="craft-num">05</div>
+          <div>
+            <h3>Inspection &amp; packing</h3>
+            <p>Every unit is checked against the approved sample before it's packed for export.</p>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- ABOUT / DIRECTOR -->
+  <section class="about" id="about">
+    <div class="wrap about-inner">
+      <div class="director-badge">
+        <img src="images/logo-badge.jpg" alt="Khawaja Hassan Shaukat, Director of The Brillers">
+      </div>
+
+      <div class="about-copy">
+        <p class="quote">"We build it the way Sialkot has always worked leather — one hide, one pattern, one stitch at a time."</p>
+        <p class="body-text">Sialkot has cut and stitched leather for generations, and The Brillers works inside that tradition rather than around it: a sample-first process, patterns cut to the buyer's spec, and every product line — jackets down to belts — finished on the same bench.</p>
+        <p class="body-text">We work with wholesale importers and brands looking for OEM or private-label production, from first sample to full production run.</p>
+        <div class="director-name">Khawaja Hassan Shaukat</div>
+        <div class="director-title">Director, The Brillers</div>
+      </div>
+    </div>
+  </section>
+
+  <!-- CONTACT -->
+  <section class="contact" id="contact">
+    <div class="wrap contact-inner">
+      <div class="contact-info">
+        <h2>Get in touch</h2>
+        <p class="lead">For wholesale enquiries, sampling or private-label orders, reach us directly at the workshop.</p>
+
+        <div class="address-block">
+          <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.6" stroke-linejoin="round"><path d="M12 22s7-7.5 7-13a7 7 0 1 0-14 0c0 5.5 7 13 7 13z"/><circle cx="12" cy="9" r="2.5"/></svg>
+          <address>
+            <strong>The Brillers</strong>
+            34/134, Budhi Bazar<br>
+            Near Ahmadia School<br>
+            Sialkot, Pakistan<br><br>
+            Director: Khawaja Hassan Shaukat
+          </address>
+        </div>
+      </div>
+
+      <form class="enquiry" id="enquiry-form">
+        <div class="field">
+          <label for="name">Name</label>
+          <input type="text" id="name" name="name" required>
+        </div>
+        <div class="field">
+          <label for="email">Email</label>
+          <input type="email" id="email" name="email" required>
+        </div>
+        <div class="field full">
+          <label for="interest">Product interest</label>
+          <select id="interest" name="interest">
+            <option>Jackets</option>
+            <option>Gloves</option>
+            <option>Wallets</option>
+            <option>Bags</option>
+            <option>Belts</option>
+            <option>Pants</option>
+            <option>Mixed / other</option>
+          </select>
+        </div>
+        <div class="field full">
+          <label for="message">Message</label>
+          <textarea id="message" name="message" placeholder="Order quantities, target markets, sample requests..."></textarea>
+        </div>
+        <div class="form-foot">
+          <button type="submit" class="btn btn-primary">Send enquiry</button>
+          <p class="form-note">This form is a front-end demo — connect it to your email or CRM to receive live enquiries.</p>
+        </div>
+        <p class="form-status" id="form-status">Thanks — this is a demo form, so nothing was actually sent. Wire it up to your email or CRM to go live.</p>
+      </form>
+    </div>
+  </section>
+
+</main>
+
+<footer>
+  <div class="wrap">
+    <div class="footer-inner">
+      <div class="footer-brand">
+        <div class="footer-brand-logo">
+          <img src="images/logo-badge.jpg" alt="The Brillers logo">
+        </div>
+        <span>The Brillers</span>
+      </div>
+      <nav class="footer-links">
+        <a href="#products">Products</a>
+        <a href="#articles">Latest</a>
+        <a href="#craft">Craftsmanship</a>
+        <a href="#about">About</a>
+        <a href="#contact">Contact</a>
+      </nav>
+    </div>
+    <div class="footer-fine">
+      <span>© 2026 The Brillers — Manufacturer &amp; Exporter, Sialkot, Pakistan.</span>
+      <span>34/134, Budhi Bazar, Near Ahmadia School, Sialkot</span>
+    </div>
+  </div>
+</footer>
+
+<script>
+  var toggle = document.getElementById('menu-toggle');
+  var nav = document.getElementById('nav-links');
+  toggle.addEventListener('click', function(){
+    var isOpen = nav.classList.toggle('open');
+    toggle.setAttribute('aria-expanded', isOpen ? 'true' : 'false');
+  });
+  nav.querySelectorAll('a').forEach(function(a){
+    a.addEventListener('click', function(){
+      nav.classList.remove('open');
+      toggle.setAttribute('aria-expanded', 'false');
+    });
+  });
+
+  var form = document.getElementById('enquiry-form');
+  var status = document.getElementById('form-status');
+  form.addEventListener('submit', function(e){
+    e.preventDefault();
+    status.classList.add('show');
+  });
+</script>
+
+</body>
+</html>
