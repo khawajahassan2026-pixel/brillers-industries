@@ -3,8 +3,10 @@
 <head>
 <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
-<title>The Brillers — Leather Goods Manufacturer, Sialkot</title>
-<meta name="description" content="The Brillers manufactures leather jackets, gloves, wallets, bags, belts and pants from Sialkot, Pakistan, for wholesale and private-label export.">
+<title>The Brillers — Premium Leather Goods | Sialkot Manufacturer</title>
+<meta name="description" content="The Brillers: Premium handcrafted leather jackets, gloves, wallets, bags, belts, and pants. Wholesale & private-label manufacturing from Sialkot, Pakistan.">
+<meta name="keywords" content="leather jackets, leather goods, handcrafted leather, wholesale leather, sialkot leather, leather manufacturer">
+<meta name="author" content="The Brillers">
 <link rel="preconnect" href="https://fonts.googleapis.com">
 <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
 <link href="https://fonts.googleapis.com/css2?family=Big+Shoulders+Display:wght@500;600;700;800;900&family=Libre+Franklin:wght@400;500;600;700&display=swap" rel="stylesheet">
@@ -87,7 +89,6 @@
     color:inherit;
   }
   .btn-ghost:hover{ background:rgba(255,255,255,0.08); }
-  .btn-ghost.on-light:hover{ background:rgba(33,23,16,0.06); }
 
   /* ---------- Header ---------- */
   header{
@@ -110,14 +111,20 @@
     gap:12px;
     color:var(--paper);
   }
-  .brand-logo{ 
-    width:44px; 
-    height:44px; 
-    flex-shrink:0; 
+  .brand-logo{
+    width:44px;
+    height:44px;
+    flex-shrink:0;
     border-radius:2px;
     overflow:hidden;
+    background:var(--brass-light);
+    display:flex;
+    align-items:center;
+    justify-content:center;
+    font-weight:700;
+    font-size:20px;
+    color:var(--saddle-dark);
   }
-  .brand-logo img{ width:100%; height:100%; object-fit:cover; }
   .brand-name{
     font-family:var(--font-display);
     font-weight:700;
@@ -179,9 +186,7 @@
 
   /* ---------- Hero ---------- */
   .hero{
-    background:
-      radial-gradient(ellipse at 18% 12%, rgba(216,174,110,0.10), transparent 55%),
-      linear-gradient(160deg, var(--saddle) 0%, var(--saddle-dark) 78%);
+    background:radial-gradient(ellipse at 18% 12%, rgba(216,174,110,0.10), transparent 55%), linear-gradient(160deg, var(--saddle) 0%, var(--saddle-dark) 78%);
     color:var(--paper);
     position:relative;
     overflow:hidden;
@@ -227,38 +232,34 @@
     gap:14px;
     margin-top:38px;
   }
-  .hero-figure{ 
-    display:flex; 
-    justify-content:center; 
-    align-items:center;
-  }
   .hero-badge{
-    width:100%;
-    max-width:280px;
+    width:280px;
+    height:280px;
+    background:linear-gradient(135deg, rgba(185,132,63,0.2), rgba(59,36,23,0.1));
+    border:2px solid var(--brass-light);
     border-radius:4px;
-    box-shadow: 0 12px 32px rgba(0,0,0,0.2);
-  }
-  .hero-badge img{
-    width:100%;
-    height:auto;
+    display:flex;
+    align-items:center;
+    justify-content:center;
+    font-size:120px;
+    box-shadow:0 12px 32px rgba(0,0,0,0.2);
   }
 
   @keyframes hero-rise{
     from{ opacity:0; transform:translateY(14px); }
     to{ opacity:1; transform:translateY(0); }
   }
-  .hero-eyebrow, .hero h1, .hero p.lead, .hero-actions, .hero-figure{
+  .hero-eyebrow, .hero h1, .hero p.lead, .hero-actions, .hero-badge{
     animation:hero-rise 0.7s ease both;
   }
   .hero h1{ animation-delay:0.06s; }
   .hero p.lead{ animation-delay:0.14s; }
   .hero-actions{ animation-delay:0.22s; }
-  .hero-figure{ animation-delay:0.1s; }
+  .hero-badge{ animation-delay:0.1s; }
 
   @media (max-width:860px){
-    .hero-inner{ grid-template-columns:1fr; padding-block:56px 48px; text-align:left; }
-    .hero-figure{ order:-1; margin-bottom:8px; }
-    .hero-badge{ max-width:200px; }
+    .hero-inner{ grid-template-columns:1fr; padding-block:56px 48px; text-align:left; gap:32px; }
+    .hero-badge{ width:200px; height:200px; font-size:80px; order:-1; margin-bottom:8px; }
   }
 
   /* ---------- Ticker ---------- */
@@ -373,25 +374,8 @@
     display:flex;
     align-items:center;
     justify-content:center;
-    color:var(--paper);
+    color:var(--brass-light);
     font-size:4rem;
-    font-weight:300;
-    position:relative;
-  }
-  .article-image img{
-    width:100%;
-    height:100%;
-    object-fit:cover;
-  }
-  .article-image-placeholder{
-    width:100%;
-    height:100%;
-    background:linear-gradient(135deg, rgba(59,36,23,0.1), rgba(140,90,52,0.1));
-    display:flex;
-    align-items:center;
-    justify-content:center;
-    font-size:3.5rem;
-    color:rgba(185,132,63,0.3);
   }
   .article-content{
     padding:26px;
@@ -482,15 +466,33 @@
     align-items:start;
   }
   .director-badge{
-    width:100%;
-    max-width:220px;
+    width:220px;
+    height:220px;
+    background:var(--saddle);
     border-radius:4px;
-    overflow:hidden;
-    box-shadow: 0 8px 20px rgba(0,0,0,0.15);
+    display:flex;
+    flex-direction:column;
+    align-items:center;
+    justify-content:center;
+    box-shadow:0 8px 20px rgba(0,0,0,0.15);
   }
-  .director-badge img{
-    width:100%;
-    height:auto;
+  .director-avatar{
+    width:120px;
+    height:120px;
+    background:var(--parchment-soft);
+    border-radius:50%;
+    display:flex;
+    align-items:center;
+    justify-content:center;
+    font-size:60px;
+    margin-bottom:12px;
+  }
+  .director-badge-text{
+    text-align:center;
+    color:var(--parchment);
+    font-size:0.9rem;
+    font-weight:500;
+    letter-spacing:0.05em;
   }
   .about-copy .quote{
     font-family:var(--font-display);
@@ -520,7 +522,8 @@
 
   @media (max-width:780px){
     .about-inner{ grid-template-columns:1fr; }
-    .director-badge{ max-width:150px; }
+    .director-badge{ width:150px; height:150px; }
+    .director-avatar{ width:80px; height:80px; font-size:40px; }
   }
 
   /* ---------- Contact ---------- */
@@ -617,14 +620,15 @@
   .footer-brand-logo{
     width:28px;
     height:28px;
+    background:var(--brass-light);
     border-radius:2px;
-    overflow:hidden;
+    display:flex;
+    align-items:center;
+    justify-content:center;
+    font-weight:700;
+    font-size:14px;
+    color:var(--saddle-dark);
     flex-shrink:0;
-  }
-  .footer-brand-logo img{
-    width:100%;
-    height:100%;
-    object-fit:cover;
   }
   .footer-brand span{ 
     font-family:var(--font-display); 
@@ -650,9 +654,7 @@
 <header>
   <div class="wrap header-inner">
     <a href="#top" class="brand">
-      <div class="brand-logo">
-        <img src="images/logo-badge.jpg" alt="The Brillers logo">
-      </div>
+      <div class="brand-logo">🧥</div>
       <span>
         <span class="brand-name">The Brillers</span>
         <span class="brand-sub">LEATHER MANUFACTURER · SIALKOT</span>
@@ -682,7 +684,7 @@
   <section class="hero">
     <div class="wrap hero-inner">
       <div>
-        <div class="hero-eyebrow"><span class="dot"></span> Manufacturer &amp; exporter, Sialkot, Pakistan</div>
+        <div class="hero-eyebrow"><span class="dot"></span> Manufacturer & exporter, Sialkot, Pakistan</div>
         <h1>Built on hide,<br>held by hand.</h1>
         <p class="lead">The Brillers manufactures leather jackets, gloves, wallets, bags, belts and pants for wholesale and private-label buyers — cut, stitched and finished in the same Sialkot workshop, to whichever spec sheet you send us.</p>
         <div class="hero-actions">
@@ -690,11 +692,7 @@
           <a href="#products" class="btn btn-ghost">See what we make</a>
         </div>
       </div>
-      <div class="hero-figure">
-        <div class="hero-badge">
-          <img src="images/logo-badge.jpg" alt="The Brillers embossed leather badge">
-        </div>
-      </div>
+      <div class="hero-badge">🧥</div>
     </div>
   </section>
 
@@ -706,8 +704,8 @@
         <span class="ticker-item">Nappa sheepskin</span><span class="ticker-rule"></span>
         <span class="ticker-item">Hand-cut patterns</span><span class="ticker-rule"></span>
         <span class="ticker-item">Saddle stitching</span><span class="ticker-rule"></span>
-        <span class="ticker-item">Brass &amp; nickel hardware</span><span class="ticker-rule"></span>
-        <span class="ticker-item">OEM &amp; private label</span><span class="ticker-rule"></span>
+        <span class="ticker-item">Brass & nickel hardware</span><span class="ticker-rule"></span>
+        <span class="ticker-item">OEM & private label</span><span class="ticker-rule"></span>
         <span class="ticker-item">Export-ready packing</span><span class="ticker-rule"></span>
       </div>
       <div class="ticker-set">
@@ -715,8 +713,8 @@
         <span class="ticker-item">Nappa sheepskin</span><span class="ticker-rule"></span>
         <span class="ticker-item">Hand-cut patterns</span><span class="ticker-rule"></span>
         <span class="ticker-item">Saddle stitching</span><span class="ticker-rule"></span>
-        <span class="ticker-item">Brass &amp; nickel hardware</span><span class="ticker-rule"></span>
-        <span class="ticker-item">OEM &amp; private label</span><span class="ticker-rule"></span>
+        <span class="ticker-item">Brass & nickel hardware</span><span class="ticker-rule"></span>
+        <span class="ticker-item">OEM & private label</span><span class="ticker-rule"></span>
         <span class="ticker-item">Export-ready packing</span><span class="ticker-rule"></span>
       </div>
     </div>
@@ -807,10 +805,7 @@
       <div class="articles-grid">
         
         <article class="article-card">
-          <div class="article-image">
-            <img src="images/article-saddle-stitch.jpg" alt="Close-up of saddle stitching on leather" loading="lazy">
-            <noscript><div class="article-image-placeholder">🧵</div></noscript>
-          </div>
+          <div class="article-image">🧵</div>
           <div class="article-content">
             <span class="article-tag">TECHNIQUE</span>
             <h3>The art of saddle stitching</h3>
@@ -821,10 +816,7 @@
         </article>
 
         <article class="article-card">
-          <div class="article-image">
-            <img src="images/article-full-grain.jpg" alt="Full-grain leather texture and samples" loading="lazy">
-            <noscript><div class="article-image-placeholder">🌾</div></noscript>
-          </div>
+          <div class="article-image">🌾</div>
           <div class="article-content">
             <span class="article-tag">MATERIALS</span>
             <h3>Full-grain vs. nappa: What's the difference?</h3>
@@ -835,10 +827,7 @@
         </article>
 
         <article class="article-card">
-          <div class="article-image">
-            <img src="images/article-pattern-cutting.jpg" alt="Leather patterns laid out for cutting" loading="lazy">
-            <noscript><div class="article-image-placeholder">✂️</div></noscript>
-          </div>
+          <div class="article-image">✂️</div>
           <div class="article-content">
             <span class="article-tag">CRAFTSMANSHIP</span>
             <h3>Pattern cutting: From hide to garment</h3>
@@ -849,10 +838,7 @@
         </article>
 
         <article class="article-card">
-          <div class="article-image">
-            <img src="images/article-hardware.jpg" alt="Selection of zips, buckles, and brass hardware" loading="lazy">
-            <noscript><div class="article-image-placeholder">⚙️</div></noscript>
-          </div>
+          <div class="article-image">⚙️</div>
           <div class="article-content">
             <span class="article-tag">HARDWARE</span>
             <h3>Choosing the right zipper and buckle</h3>
@@ -863,10 +849,7 @@
         </article>
 
         <article class="article-card">
-          <div class="article-image">
-            <img src="images/article-finishing.jpg" alt="Edge burnishing and leather finishing tools" loading="lazy">
-            <noscript><div class="article-image-placeholder">🧵</div></noscript>
-          </div>
+          <div class="article-image">🔨</div>
           <div class="article-content">
             <span class="article-tag">FINISHING</span>
             <h3>Edge burnishing and sealing</h3>
@@ -877,10 +860,7 @@
         </article>
 
         <article class="article-card">
-          <div class="article-image">
-            <img src="images/article-packing.jpg" alt="Finished leather goods being packed for export" loading="lazy">
-            <noscript><div class="article-image-placeholder">📦</div></noscript>
-          </div>
+          <div class="article-image">📦</div>
           <div class="article-content">
             <span class="article-tag">LOGISTICS</span>
             <h3>Export-ready packing and shipping</h3>
@@ -906,7 +886,7 @@
         <div class="craft-step">
           <div class="craft-num">01</div>
           <div>
-            <h3>Sourcing &amp; grading</h3>
+            <h3>Sourcing & grading</h3>
             <p>Hides are graded by hand for grain, thickness and flaw before they're approved for cutting.</p>
           </div>
         </div>
@@ -920,21 +900,21 @@
         <div class="craft-step">
           <div class="craft-num">03</div>
           <div>
-            <h3>Skiving &amp; stitching</h3>
+            <h3>Skiving & stitching</h3>
             <p>Edges are skived for a flat seam, then saddle-stitched or lock-stitched depending on the piece.</p>
           </div>
         </div>
         <div class="craft-step">
           <div class="craft-num">04</div>
           <div>
-            <h3>Hardware &amp; finishing</h3>
+            <h3>Hardware & finishing</h3>
             <p>Zips, buckles, rivets and linings are set by hand; edges are burnished and sealed.</p>
           </div>
         </div>
         <div class="craft-step">
           <div class="craft-num">05</div>
           <div>
-            <h3>Inspection &amp; packing</h3>
+            <h3>Inspection & packing</h3>
             <p>Every unit is checked against the approved sample before it's packed for export.</p>
           </div>
         </div>
@@ -946,7 +926,8 @@
   <section class="about" id="about">
     <div class="wrap about-inner">
       <div class="director-badge">
-        <img src="images/logo-badge.jpg" alt="Khawaja Hassan Shaukat, Director of The Brillers">
+        <div class="director-avatar">👔</div>
+        <div class="director-badge-text">Khawaja Hassan Shaukat<br>Director</div>
       </div>
 
       <div class="about-copy">
@@ -1005,9 +986,9 @@
         </div>
         <div class="form-foot">
           <button type="submit" class="btn btn-primary">Send enquiry</button>
-          <p class="form-note">This form is a front-end demo — connect it to your email or CRM to receive live enquiries.</p>
+          <p class="form-note">This form is front-end only. Wire it to your email or CRM to receive live enquiries.</p>
         </div>
-        <p class="form-status" id="form-status">Thanks — this is a demo form, so nothing was actually sent. Wire it up to your email or CRM to go live.</p>
+        <p class="form-status" id="form-status">✓ Thanks for your interest! To receive live enquiries, wire this form to your email or CRM service.</p>
       </form>
     </div>
   </section>
@@ -1018,9 +999,7 @@
   <div class="wrap">
     <div class="footer-inner">
       <div class="footer-brand">
-        <div class="footer-brand-logo">
-          <img src="images/logo-badge.jpg" alt="The Brillers logo">
-        </div>
+        <div class="footer-brand-logo">🧥</div>
         <span>The Brillers</span>
       </div>
       <nav class="footer-links">
@@ -1032,7 +1011,7 @@
       </nav>
     </div>
     <div class="footer-fine">
-      <span>© 2026 The Brillers — Manufacturer &amp; Exporter, Sialkot, Pakistan.</span>
+      <span>© 2026 The Brillers — Manufacturer & Exporter, Sialkot, Pakistan.</span>
       <span>34/134, Budhi Bazar, Near Ahmadia School, Sialkot</span>
     </div>
   </div>
@@ -1057,6 +1036,10 @@
   form.addEventListener('submit', function(e){
     e.preventDefault();
     status.classList.add('show');
+    setTimeout(function(){
+      status.classList.remove('show');
+      form.reset();
+    }, 4000);
   });
 </script>
 
